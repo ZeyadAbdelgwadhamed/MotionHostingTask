@@ -11,16 +11,6 @@ import java.time.Duration;
 public class Waite {
 
     private Waite(){}
-    //Element Present
-    public static WebElement waitForElementPresent(WebDriver driver, By locator){
-        return new WebDriverWait(driver, Duration.ofSeconds(10)).
-                until(driver1 -> driver.findElement(locator));
-    }
-
-    public static WebElement waitForElementVisible(WebDriver driver, By locator) {
-        return new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
     public static WebElement waitForElementClickable(WebDriver driver,By locator){
         return new WebDriverWait(driver,Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(locator));
     }
