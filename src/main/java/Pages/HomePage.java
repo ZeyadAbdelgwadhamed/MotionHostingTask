@@ -2,8 +2,11 @@ package Pages;
 
 import Utilities.ActionsElement;
 import Utilities.Scrolling;
+import Utilities.Waite;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import java.time.Duration;
 
 public class HomePage {
 
@@ -12,9 +15,7 @@ public class HomePage {
 
     // Constructor
     public HomePage(WebDriver driver) {
-
         this.driver = driver;
-
     }
 
 
@@ -34,9 +35,7 @@ public class HomePage {
     }
 
     public String getHomePageTitle(){
-
         return driver.getTitle();
-
     }
 
 
@@ -46,13 +45,16 @@ public class HomePage {
 
     }
 
-
     public boolean isWebHostingMenuDisplayed(){
 
         return driver.findElement(webHostingMenu).isDisplayed();
 
     }
+
+
+
     public void openDomainPage(){
+        acceptAllCookies();
         Scrolling.scrollToElement(driver,domainName);
         ActionsElement.clickOnElement(driver,domainName);
     }
