@@ -11,16 +11,11 @@ public class HomeTest extends BaseTest {
     public void verifyHomePage(){
 
         HomePage homePage = new HomePage(driver);
-
-//        homePage.acceptAllCookies();
-
-        // Verify Title
-
+        driver.manage().deleteAllCookies();
+        homePage.acceptAllCookies();
         Assert.assertTrue(
                 homePage.getHomePageTitle()
                         .contains("InMotion Hosting"));
-
-        homePage.openDomainPage();
     }
 
 
