@@ -6,6 +6,7 @@
         <classes>
             <class name="HomeTest" />
             <class name="DomainSearchTest" />
+            <class name="AddHostingTest" />
         </classes>
     </test>
 </suite>
