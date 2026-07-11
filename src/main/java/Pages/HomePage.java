@@ -2,11 +2,9 @@ package Pages;
 
 import Utilities.ActionsElement;
 import Utilities.Scrolling;
-import Utilities.Waite;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.time.Duration;
 
 public class HomePage {
 
